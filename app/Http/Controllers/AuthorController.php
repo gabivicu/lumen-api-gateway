@@ -7,19 +7,26 @@ use Illuminate\Http\Response;
 use App\Traits\ApiResponser;
 use App\Models\Author;
 use Illuminate\Support\Facades\Auth;
+use App\Services\AuthorService;
 
 class AuthorController extends Controller
 {
     use ApiResponser;
 
     /**
+     * The service to consume the authors microservice
+     * @var AuthorService
+     */
+    public $authorService;
+
+    /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(AuthorService $authorService)
     {
-        //
+        $this->authorService = $authorService;
     }
 
     /**
