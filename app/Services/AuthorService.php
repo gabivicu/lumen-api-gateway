@@ -21,7 +21,7 @@ class AuthorService
 
     /**
      * Obtain the full list of authors from the author service
-     * @return stri ng
+     * @return string
      */
     public function obtainAuthors()
     {
@@ -48,7 +48,7 @@ class AuthorService
 
     /**
      * Update an instance of author using the author service
-     * @return [type] [description]
+     * @return string
      */
     public function editAuthor($data, $author)
     {
