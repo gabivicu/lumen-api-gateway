@@ -88,7 +88,8 @@ $app->configure('app');
 /*
 |--------------------------------------------------------------------------
 | Register Service Providers
-|--------------------------------------------------------------------------
+| Register Laravel Passport
+Passport-----------------------------------------------------------------------
 |
 | Here we will register all of the application's service providers which
 | are used to bind services into the container. Service providers are
@@ -97,8 +98,9 @@ $app->configure('app');
 */
 
 // $app->register(App\Providers\AppServiceProvider::class);
-// $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
+$app->register(App\Providers\AuthServiceProvider::class);
+$app->register(Laravel\Passport\PassportServiceProvider::class);
 
 /*
 |--------------------------------------------------------------------------
